@@ -1,0 +1,21 @@
+<sdf version="1.9">
+  <model name="box">
+    <link name="box_link">
+      <visual name="visual">
+        <geometry><box><size>0.5 0.5 0.2</size></box></geometry>
+        <material>
+          <ambient>0.2 0.2 0.8 1.0</ambient>
+          <diffuse>0.2 0.2 0.8 1.0</diffuse>
+          <specular>0.1 0.1 0.1 1.0</specular>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry><box><size>0.5 0.5 0.2</size></box></geometry>
+      </collision>
+      <inertial>
+        <mass>1.0</mass>
+        <inertia><ixx>0.01</ixx><iyy>0.01</iyy><izz>0.01</izz></inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

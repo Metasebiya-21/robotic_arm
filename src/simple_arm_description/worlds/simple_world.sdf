@@ -1,0 +1,23 @@
+<sdf version="1.9">
+  <world name="simple_world">
+    <!-- Ground Plane -->
+    <include><uri>model://ground_plane</uri></include>
+    <!-- Lighting -->
+    <include><uri>model://sun</uri></include>
+    <!-- Crate -->
+    <include>
+      <uri>model://crate</uri>
+      <pose>1 0 0.1 0 0 0</pose>
+    </include>
+    <!-- Cube (Item to Pick) -->
+    <include>
+      <uri>model://cube</uri>
+      <pose>1 0 0.3 0 0 0</pose> 
+    </include>
+    <!-- Box (Target) -->
+    <include>
+      <uri>model://box</uri>
+      <pose>-1 0 0.1 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

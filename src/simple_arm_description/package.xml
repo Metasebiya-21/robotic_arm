@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>simple_arm_description</name>
+  <version>0.0.0</version>
+  <description>Simple 3-DOF robot arm description for Gazebo simulation</description>
+  <maintainer email="metasebiya8@gmail.com">Metasebiya</maintainer>
+  <license>Apache-2.0</license>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>ign_ros2_control</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
