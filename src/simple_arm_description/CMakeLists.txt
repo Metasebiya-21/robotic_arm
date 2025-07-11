@@ -7,15 +7,11 @@ find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(ros_gz_sim REQUIRED)
-find_package(ros2_control REQUIRED)
-find_package(ros2_controllers REQUIRED)
-find_package(ros_gz_sim REQUIRED)
-find_package(ros_ign_bridge REQUIRED)
+find_package(ros_gz_sim REQUIRED)  # For Gazebo simulation
+find_package(ign_ros2_control REQUIRED)  # Correct package for Gazebo ROS 2 control
 find_package(xacro REQUIRED)
 find_package(robot_state_publisher REQUIRED)
-find_package(ign_ros2_control REQUIRED)
-
+find_package(ros_ign_bridge REQUIRED)  # For ROS-Ignition bridging
 
 # Install directories
 install(

@@ -1,17 +1,29 @@
-<?xml version="1.0"?>
 <package format="3">
   <name>simple_arm_description</name>
   <version>0.0.0</version>
   <description>Simple 3-DOF robot arm description for Gazebo simulation</description>
   <maintainer email="metasebiya8@gmail.com">Metasebiya</maintainer>
   <license>Apache-2.0</license>
-  <depend>rclpy</depend>
-  <depend>std_msgs</depend>
-  <depend>geometry_msgs</depend>
-  <depend>ros_gz_sim</depend>
-  <depend>xacro</depend>
-  <depend>robot_state_publisher</depend>
-  <depend>ign_ros2_control</depend>
+
+  <!-- 1. This tells colcon & ament that you’re using CMake/ament_cmake -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 2. These are the packages you `find_package(...)` in your CMakeLists -->
+  <build_depend>xacro</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>ros_gz_sim</build_depend>
+  <build_depend>ign_ros2_control</build_depend>
+  <!-- add any others you actually use in CMakeLists.txt -->
+
+  <!-- 3. Runtime dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ign_ros2_control</exec_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>

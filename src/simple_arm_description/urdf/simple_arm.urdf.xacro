@@ -135,10 +135,17 @@
 
   <!-- Gazebo Plugin -->
   <gazebo>
-    <plugin name="gz_ros2_control" filename="libign_ros2_control-system.so">
+    <plugin
+      filename="libign_ros2_control-system.so"
+      name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      <!-- tell it where to find your robot_description -->
       <robot_param>robot_description</robot_param>
       <robot_param_node>robot_state_publisher</robot_param_node>
+
+      <!-- make sure this path actually points at your YAML! -->
       <parameters>$(find simple_arm_description)/config/controllers.yaml</parameters>
+
+      <!-- this will be the ROS2 node name under which the controller_manager spins up -->
       <controller_manager_name>controller_manager</controller_manager_name>
     </plugin>
   </gazebo>
